@@ -24,7 +24,7 @@ const MovieVideo = ({ navigation }) => {
 };
 
 MovieVideo.navigationOptions = () => ({
-  title: i18n('Trailer')
+  title: i18n.t('Trailer')
 });
 
 export default MovieVideo;

@@ -31,7 +31,7 @@ export const el = {
   Date: 'Ημερομηνία',Releases: 'Καινούργιες',Old: 'Παλιές',Filter:'Φίλτρα',Confirm:'Εντάξει',
   Synopsis: 'Περίληψη',Readmore: 'Περισσότερα',Readless: 'Λιγότερα',
   Maincast: 'Ηθοποιοί',Maintechnicalteam: 'Τεχνική ομάδα',Producer: 'Παραγωγός',
-  Trailer: 'Trailer',More: 'Περισσότερα',Attention: 'Σφάλμα',MovieDetails:'Λεπτομέρειες ταινίας'
+  Trailer: 'Τρέϊλερ',More: 'Περισσότερα',Attention: 'Σφάλμα',MovieDetails:'Λεπτομέρειες ταινίας'
 };
 
 i18n.fallbacks = false;
@@ -177,7 +177,7 @@ const MovieList = ({ navigation }) => {
     if (type !== filterType) {
       await setPage(1);
       await setResults([]);
-      await setFilter({ filterType: type, filterName: i18n.t(name) });
+      await setFilter({ filterType: type, filterName: name });
       await setIsVisible(visible);
       await requestMoviesList();
     } else {
@@ -206,7 +206,7 @@ const MovieList = ({ navigation }) => {
             {results.length > 0 && (
               <View style={styles.containerMainText}>
                 <Text style={styles.textMain} numberOfLines={1}>
-                  {typeRequest === 'discover' ? filterName : i18n.t(name)}
+                  {typeRequest === 'discover' ? filterName : name}
                 </Text>
                 <TouchableOpacity
                   style={[
