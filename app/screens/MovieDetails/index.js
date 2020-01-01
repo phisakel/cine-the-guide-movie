@@ -274,7 +274,7 @@ MovieDetails.navigationOptions = ({ navigation }) => {
   const { id, title, handleShare } = navigation.state.params || {};
 
   return {
-    title: 'Movie details',
+    title: i18n.t('MovieDetails'),
     headerRight: (
       <TouchableOpacity
         style={styles.buttonShare}

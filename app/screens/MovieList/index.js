@@ -23,15 +23,15 @@ export const en = {
   Date: 'Date',Releases: 'Releases',Old: 'Old',Filter:'Filter',Confirm:'Confirm',
   Synopsis: 'Synopsis',Readmore: 'Read more',Readless: 'Read less',
   Maincast: 'Main cast',Maintechnicalteam: 'Main technical team',Producer: 'Producer',
-  Trailer: 'Trailer',More: 'More',Attention: 'Attention'
+  Trailer: 'Trailer',More: 'More',Attention: 'Attention',MovieDetails:'Movie details'
 };
 export const el = {
   Home: 'Ταινίες',Search: 'Αναζήτηση',MostPopular: 'Πιο δημοφιλείς',LessPopular: 'Λιγότερο δημοφιλείς',
   HigherRevenue:'Περισσ. εισπράξεις',LowestRevenue:'Λιγότερες εισπράξεις',
   Date: 'Ημερομηνία',Releases: 'Καινούργιες',Old: 'Παλιές',Filter:'Φίλτρα',Confirm:'Εντάξει',
   Synopsis: 'Περίληψη',Readmore: 'Περισσότερα',Readless: 'Λιγότερα',
-  Maincast: 'Κυρίως καστ',Maintechnicalteam: 'Τεχνική ομάδα',Producer: 'Παραγωγός',
-  Trailer: 'Trailer',More: 'Περισσότερα',Attention: 'Σφάλμα'
+  Maincast: 'Ηθοποιοί',Maintechnicalteam: 'Τεχνική ομάδα',Producer: 'Παραγωγός',
+  Trailer: 'Trailer',More: 'Περισσότερα',Attention: 'Σφάλμα',MovieDetails:'Λεπτομέρειες ταινίας'
 };
 
 i18n.fallbacks = false;
