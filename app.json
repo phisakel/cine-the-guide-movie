@@ -28,7 +28,7 @@
       "bundleIdentifier": "gr.phisakel.cineapp"
     },
     "android": {
-      "package": "com.fitncult.mainapp",
+      "package": "gr.phisakel.cineapp",
       "versionCode": 1
     },
     "githubUrl": "https://github.com/murillo94/cine-the-guide-movie"
