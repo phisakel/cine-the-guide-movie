@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from 'i18n-js';
 import { WebView } from 'react-native-webview';
 
 import Screen from '../../components/common/Screen';
@@ -23,7 +24,7 @@ const MovieVideo = ({ navigation }) => {
 };
 
 MovieVideo.navigationOptions = () => ({
-  title: 'Trailer'
+  title: i18n('Trailer')
 });
 
 export default MovieVideo;

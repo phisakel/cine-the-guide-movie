@@ -5,7 +5,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-
+import i18n from 'i18n-js';
 import { MoviesScreen, SearchScreen, ConfigurationScreen } from './screens';
 import { ROUTES, TABS } from './routes';
 
@@ -20,6 +20,7 @@ const defaultNavigationOptions = {
 
 const MoviesStack = createStackNavigator(MoviesScreen, {
   initialRouteName: ROUTES.MOVIE_LIST,
+  title: i18n.t('Home'),
   defaultNavigationOptions,
   navigationOptions: {
     tabBarIcon: ({ tintColor }) => (
@@ -30,6 +31,7 @@ const MoviesStack = createStackNavigator(MoviesScreen, {
 
 const SearchStack = createStackNavigator(SearchScreen, {
   initialRouteName: ROUTES.SEARCH,
+  title: i18n.t('Search'),
   defaultNavigationOptions,
   navigationOptions: {
     tabBarIcon: ({ tintColor }) => (
@@ -40,6 +42,7 @@ const SearchStack = createStackNavigator(SearchScreen, {
 
 const ConfigurationStack = createStackNavigator(ConfigurationScreen, {
   initialRouteName: ROUTES.CONFIGURATION,
+  title: i18n.t('More'),
   defaultNavigationOptions,
   navigationOptions: {
     tabBarIcon: ({ tintColor }) => (
@@ -68,18 +71,26 @@ const MovieListTabBarVisible = navigation => {
 const tabNavigatorDefault = {
   [TABS.HOME]: {
     screen: MoviesStack,
+    title: i18n.t('Home'),
     navigationOptions: ({ navigation }) => ({
+      tabBarLabel: i18n.t('Home'),
       tabBarVisible: MovieListTabBarVisible(navigation)
     })
   },
   [TABS.SEARCH]: {
     screen: SearchStack,
+    title: i18n.t('Search'),
     navigationOptions: ({ navigation }) => ({
+      tabBarLabel: i18n.t('Search'),
       tabBarVisible: MovieListTabBarVisible(navigation)
     })
   },
   [TABS.CONFIG]: {
-    screen: ConfigurationStack
+    screen: ConfigurationStack,
+    title: i18n.t('More'), 
+    navigationOptions: ({ navigation }) => ({
+      tabBarLabel: i18n.t('More')
+    })
   }
 };
 

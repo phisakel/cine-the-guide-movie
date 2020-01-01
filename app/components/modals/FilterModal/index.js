@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-
+import i18n from 'i18n-js';
 import { Modal } from '../Modal';
 import { TouchableOpacity } from '../../common/TouchableOpacity';
 import { Switch } from '../../common/Switch';
@@ -35,7 +35,7 @@ const FilterModal = ({ isVisible, filter, onVisible, onFilter, style }) => {
   return (
     <Modal isVisible={isVisible} onClose={onVisible} style={style}>
       <View style={styles.containerModal}>
-        <Text style={styles.modalTitle}>Filter</Text>
+        <Text style={styles.modalTitle}>{i18n.t('Filter')}</Text>
         <ScrollView>
           <View style={styles.containerScroll}>
             <View style={styles.containerSection}>
@@ -43,13 +43,13 @@ const FilterModal = ({ isVisible, filter, onVisible, onFilter, style }) => {
                 Date
               </Text>
               <Filter
-                title="Releases"
+                title={i18n.t('Releases')}
                 type="release_date.desc"
                 selected={type}
                 onChange={changeValues}
               />
               <Filter
-                title="Old"
+                title={i18n.t('Old')}
                 type="release_date.asc"
                 selected={type}
                 onChange={changeValues}
@@ -60,13 +60,13 @@ const FilterModal = ({ isVisible, filter, onVisible, onFilter, style }) => {
                 Popularity
               </Text>
               <Filter
-                title="Most popular"
+                title={i18n.t('MostPopular')}
                 type="popularity.desc"
                 selected={type}
                 onChange={changeValues}
               />
               <Filter
-                title="Less popular"
+                title={i18n.t("LessPopular")}
                 type="popularity.asc"
                 selected={type}
                 onChange={changeValues}
@@ -77,13 +77,13 @@ const FilterModal = ({ isVisible, filter, onVisible, onFilter, style }) => {
                 Revenue
               </Text>
               <Filter
-                title="Higher revenue"
+                title={i18n.t("HigherRevenue")}
                 type="revenue.desc"
                 selected={type}
                 onChange={changeValues}
               />
               <Filter
-                title="Lowest revenue"
+                title={i18n.t('LowestRevenue')}
                 type="revenue.asc"
                 selected={type}
                 onChange={changeValues}
@@ -107,7 +107,7 @@ const FilterModal = ({ isVisible, filter, onVisible, onFilter, style }) => {
             onPress={() => onFilter(type, name, false)}
           >
             <Text style={[styles.buttonText, styles.buttonTextSave]}>
-              Confirm
+              {i18n.t('Confirm')}
             </Text>
           </TouchableOpacity>
         </View>

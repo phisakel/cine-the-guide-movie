@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import ReadMore from 'react-native-read-more-text';
-
+import i18n from 'i18n-js';
 import { Alert } from '../../components/common/Alert';
 import { Share } from '../../components/common/Share';
 import Screen from '../../components/common/Screen';
@@ -30,6 +30,7 @@ import isoLanguage from '../../data/iso.json';
 
 import { darkBlue } from '../../utils/colors';
 import styles from './styles';
+
 
 const UNINFORMED = 'Uninformed';
 const INITIAL_INFO = {
@@ -211,20 +212,20 @@ const MovieDetails = ({ navigation }) => {
               />
               <View style={styles.containerMovieInfo}>
                 <MainInfoRow data={infosDetail} />
-                <SectionRow title="Synopsis">
+                <SectionRow title={i18n.t("Synopsis")}>
                   <ReadMore
                     numberOfLines={3}
                     renderTruncatedFooter={handlePress =>
-                      renderReadMoreFooter('Read more', handlePress)
+                      renderReadMoreFooter(i18n.t('Readmore'), handlePress)
                     }
                     renderRevealedFooter={handlePress =>
-                      renderReadMoreFooter('Read less', handlePress)
+                      renderReadMoreFooter(i18n.t('Readless'), handlePress)
                     }
                   >
                     <Text style={styles.subTitleInfo}>{overview}</Text>
                   </ReadMore>
                 </SectionRow>
-                <SectionRow title="Main cast">
+                <SectionRow title={i18n.t("Maincast")}>
                   <PersonListRow
                     data={cast}
                     type="character"
@@ -234,7 +235,7 @@ const MovieDetails = ({ navigation }) => {
                     renderItem={renderItem}
                   />
                 </SectionRow>
-                <SectionRow title="Main technical team">
+                <SectionRow title={i18n.t("Maintechnicalteam")}>
                   <PersonListRow
                     data={crew}
                     type="job"
@@ -244,7 +245,7 @@ const MovieDetails = ({ navigation }) => {
                     renderItem={renderItem}
                   />
                 </SectionRow>
-                <SectionRow title="Producer" isLast>
+                <SectionRow title={i18n.t("Producer")} isLast>
                   <PersonListRow
                     data={productionCompanies}
                     type="production"

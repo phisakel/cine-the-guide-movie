@@ -1,3 +1,4 @@
+import i18n from 'i18n-js';
 import MovieList from '../screens/MovieList';
 import Configuration from '../screens/Configuration';
 import MovieDetails from '../screens/MovieDetails';
@@ -9,8 +10,9 @@ import { ROUTES } from './routes';
 export const MoviesScreen = {
   [ROUTES.MOVIE_LIST]: {
     screen: MovieList,
+    title: i18n.t('Home'),
     navigationOptions: {
-      title: 'Home'
+      title: i18n.t('Home')
     }
   },
   [ROUTES.MOVIE_DETAILS]: {
@@ -24,8 +26,9 @@ export const MoviesScreen = {
 export const SearchScreen = {
   [ROUTES.SEARCH]: {
     screen: Search,
+    title: i18n.t('Search'),
     navigationOptions: {
-      title: 'Search'
+      title: i18n.t('Search')
     }
   },
   [ROUTES.SEARCH_RESULTS]: {
@@ -42,8 +45,9 @@ export const SearchScreen = {
 export const ConfigurationScreen = {
   [ROUTES.CONFIGURATION]: {
     screen: Configuration,
+    title: i18n.t('More'),
     navigationOptions: {
-      title: 'More'
+      title: i18n.t('More')
     }
   }
 };

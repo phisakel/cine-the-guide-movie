@@ -1,6 +1,5 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
-
 import Screen from '../../components/common/Screen';
 import InputSearch from '../../components/common/InputSearch';
 import { TouchableOpacity } from '../../components/common/TouchableOpacity';

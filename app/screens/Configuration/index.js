@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import Constants from 'expo-constants';
 import { Feather } from '@expo/vector-icons';
-
+import i18n from 'i18n-js';
+import * as StoreReview from 'expo-store-review';
 import { Alert } from '../../components/common/Alert';
 import { Share } from '../../components/common/Share';
 import Screen from '../../components/common/Screen';
@@ -35,7 +36,7 @@ const Configuration = () => {
 
   showError = () => {
     Alert({
-      title: 'Attention',
+      title: i18n.t('Attention'),
       description: 'Something wrong has happened, please try again later.'
     });
   };
@@ -51,19 +52,16 @@ const Configuration = () => {
 
   handleShare = () => {
     Share({
-      message: 'Learn all about movies and series \u{1F37F}',
+      message: 'MovieDB \u{1F37F}',
       url: 'https://www.themoviedb.org/',
-      title: 'AmoCinema',
+      title: i18n.t('Cinema'),
       dialogTitle: 'Learn all about movies and series \u{1F37F}'
     });
   };
 
   handleRating = () => {
-    Alert({
-      title: 'Attention',
-      description:
-        'Nothing happens now. In the future you will be redirected to store.'
-    });
+    StoreReview.requestReview();
+    // Alert({title: i18n.t('Attention'), description:'Nothing happens now. In the future you will be redirected to store.' });
   };
 
   return (

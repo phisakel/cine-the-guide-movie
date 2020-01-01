@@ -1,12 +1,15 @@
 {
   "expo": {
-    "name": "Cine: The Movie Guide",
-    "slug": "cine-the-movie-guide",
-    "description": "Cine is your movie guide. The fastest and easiest way to find Movies, Actors and Series on your device. Know about ratings and reviews from The Movie Database (TMDb).",
+    "name": "Cine: Movie Guide and Trailers for Greece",
+    "slug": "Cine_Movie_trailers_Greece",
+    "description": "Cine is a movie guide for Greece. See trailers, find Movies, Actors and Series, see ratings and reviews from The Movie Database (TMDb).",
     "version": "1.0.0",
     "privacy": "public",
     "sdkVersion": "36.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./app/assets/images/icon.png",
     "splash": {
@@ -17,9 +20,16 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": true,
+      "bundleIdentifier": "gr.phisakel.cineapp"
+    },
+    "android": {
+      "package": "com.fitncult.mainapp",
+      "versionCode": 1
     },
     "githubUrl": "https://github.com/murillo94/cine-the-guide-movie"
   }
