@@ -1,7 +1,7 @@
 const api = 'https://api.themoviedb.org/3';
 
 // phisakel key
-const key = 'YOUR KEY';
+const key = '<KEY>';
 
 const defaultContent = {
   api_key: key,

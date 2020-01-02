@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginTop: 35
   },
   subTitleInfo: {
-    fontSize: fontSizeResponsive(2.1),
+    fontSize: fontSizeResponsive(2.0),
     color: blue,
     textAlign: 'justify'
   },

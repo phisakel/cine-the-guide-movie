@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   textTitle: {
-    fontSize: fontSizeResponsive(2.6),
+    fontSize: fontSizeResponsive(2.1),
     color: darkBlue,
     fontWeight: 'bold'
   },

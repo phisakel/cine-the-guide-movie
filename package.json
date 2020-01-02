@@ -65,7 +65,6 @@
       "<rootDir>/jest/mock.js"
     ]
   },
-  
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
@@ -74,4 +73,3 @@
     ]
   }
 }
-

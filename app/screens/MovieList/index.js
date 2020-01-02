@@ -23,7 +23,9 @@ export const en = {
   Date: 'Date',Releases: 'Releases',Old: 'Old',Filter:'Filter',Confirm:'Confirm',
   Synopsis: 'Synopsis',Readmore: 'Read more',Readless: 'Read less',
   Maincast: 'Main cast',Maintechnicalteam: 'Main technical team',Producer: 'Producer',
-  Trailer: 'Trailer',More: 'More',Attention: 'Attention',MovieDetails:'Movie details'
+  Trailer: 'Trailer',More: 'More',Attention: 'Attention',MovieDetails:'Movie details',
+  Duration: 'Duration',Genre: 'Genre',Language: 'Language',
+  Release: 'Release',Budget: 'Budget',Revenue: 'Revenue',Adult:'Adult',Yes:'Yes',No:'No'
 };
 export const el = {
   Home: 'Ταινίες',Search: 'Αναζήτηση',MostPopular: 'Πιο δημοφιλείς',LessPopular: 'Λιγότερο δημοφιλείς',
@@ -31,7 +33,9 @@ export const el = {
   Date: 'Ημερομηνία',Releases: 'Καινούργιες',Old: 'Παλιές',Filter:'Φίλτρα',Confirm:'Εντάξει',
   Synopsis: 'Περίληψη',Readmore: 'Περισσότερα',Readless: 'Λιγότερα',
   Maincast: 'Ηθοποιοί',Maintechnicalteam: 'Τεχνική ομάδα',Producer: 'Παραγωγός',
-  Trailer: 'Τρέϊλερ',More: 'Περισσότερα',Attention: 'Σφάλμα',MovieDetails:'Λεπτομέρειες ταινίας'
+  Trailer: 'Τρέϊλερ',More: 'Περισσότερα',Attention: 'Σφάλμα',MovieDetails:'Λεπτομέρειες ταινίας',
+  Duration: 'Διάρκεια',Genre: 'Είδος',Language: 'Γλώσσα',
+  Release: 'Κυκλοφορία',Budget: 'Budget',Revenue: 'Revenue',Adult:'Ενήλικες',Yes:'Ναι',No:'Οχι'
 };
 
 i18n.fallbacks = false;

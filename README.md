@@ -60,3 +60,10 @@ To open the project, choose one:
 ## License
 
 AGPL-3.0, see the [LICENSE](./LICENSE.md) file.
+
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },

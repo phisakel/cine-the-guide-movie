@@ -1,11 +1,10 @@
 import React, { memo } from 'react';
-import { View, Text, Image } from 'react-native';
-
+import { View, Text, Image,Dimensions } from 'react-native';
 import { TouchableOpacity } from '../../../common/TouchableOpacity';
-
 import { getImageApi } from '../../../../utils/images';
-
 import styles from './styles';
+
+export const { width, height } = Dimensions.get('screen');
 
 const uninformed = 'Uninformed';
 
@@ -19,7 +18,7 @@ const PersonRow = memo(
         >
           {type === 'character' && (
             <Text
-              numberOfLines={1}
+              numberOfLines={2}
               style={[styles.titleCast, styles.titleCharacter]}
             >
               {item.character || uninformed}
@@ -27,7 +26,7 @@ const PersonRow = memo(
           )}
           {type === 'job' && (
             <Text
-              numberOfLines={1}
+              numberOfLines={2}
               style={[styles.titleCast, styles.titleCharacter]}
             >
               {item.job || uninformed}
@@ -37,7 +36,7 @@ const PersonRow = memo(
             source={getImageApi(item.profile_path)}
             style={styles.castPhoto}
           />
-          <Text numberOfLines={1} style={styles.titleCast}>
+          <Text numberOfLines={2} style={styles.titleCast}>
             {item.name || uninformed}
           </Text>
         </TouchableOpacity>
